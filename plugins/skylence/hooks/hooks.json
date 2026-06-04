@@ -1,6 +1,16 @@
 {
-  "description": "Judge hook — PreToolUse rules engine (deny/allow/escalate-to-LLM). No-op until ~/.claude/judge-rules.json exists; copy hooks/judge-rules.example.json to opt in. Requires jq.",
+  "description": "Judge hook (PreToolUse rules engine, opt-in via ~/.claude/judge-rules.json) + SessionStart steer to prefer skyline MCP tools over built-in file tools.",
   "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/session-start.sh\""
+          }
+        ]
+      }
+    ],
     "PreToolUse": [
       {
         "matcher": "Bash|Write|Edit|NotebookEdit|mcp__",
