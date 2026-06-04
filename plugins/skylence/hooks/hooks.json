@@ -1,0 +1,17 @@
+{
+  "description": "Judge hook — PreToolUse rules engine (deny/allow/escalate-to-LLM). No-op until ~/.claude/judge-rules.json exists; copy hooks/judge-rules.example.json to opt in. Requires jq.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Write|Edit|NotebookEdit|mcp__",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/judge-hook.sh\"",
+            "statusMessage": "Judging tool call..."
+          }
+        ]
+      }
+    ]
+  }
+}
