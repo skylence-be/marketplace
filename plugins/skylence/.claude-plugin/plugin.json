@@ -1,7 +1,7 @@
 {
   "name": "skylence",
   "version": "1.0.0",
-  "description": "Skylence .sky workflow authoring and operation: 5 slash commands (incl. /lsp install <language>), 11 skills (incl. the judge-design chain and judge-setup), 6 bundled MCP servers (stdio + HTTP), 13 LSP servers (skyway lsp stdio plus the official Claude Code language servers), a judge PreToolUse hook (opt-in via ~/.claude/judge-rules.json), and a SessionStart skyline-tools steer. The skyway binary is optional — servers for missing binaries simply don't start.",
+  "description": "Skylence .sky workflow authoring and operation: 5 slash commands (incl. /lsp install <language>), 12 skills (incl. the judge-design chain, judge-setup, and skyline-setup), 6 bundled MCP servers (stdio + HTTP), 13 LSP servers (skyway lsp stdio plus the official Claude Code language servers), a judge PreToolUse hook (opt-in via ~/.claude/judge-rules.json), and a SessionStart skyline-tools steer. The skyway binary is optional — servers for missing binaries simply don't start.",
   "author": {
     "name": "Skylence"
   },
