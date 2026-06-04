@@ -1,0 +1,32 @@
+{
+  "name": "skylence-marketplace",
+  "owner": {
+    "name": "Skylence",
+    "contact": "github.com/skylence-be"
+  },
+  "metadata": {
+    "description": "Skylence Claude Code marketplace. One plugin: skylence — author, run, lint, and debug .sky workflows for the Skylence harness builder."
+  },
+  "plugins": [
+    {
+      "name": "skylence",
+      "source": "./plugins/skylence",
+      "description": "Skylence .sky workflow authoring and operation. 1 agent (skylence-workflow-author), 4 slash commands (workflow-new, run, lint, doctor), and 5 skills: four-delimiter .sky format, sky CLI reference, debugging failed runs, MUST/MUST NOT rules, and a meta-workflows catalogue. Bundles 5 MCP servers via .mcp.json (sky mcp stdio plus HTTP endpoints for skylence-content, skyline, skyway, and skybox) and 13 LSP servers via .lsp.json (sky lsp stdio plus the official Claude Code language servers: clangd, csharp-ls, gopls, jdtls, kotlin-lsp, lua, intelephense, pyright, ruby-lsp, rust-analyzer, sourcekit-lsp, typescript). Prerequisite: the sky binary on PATH.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Skylence"
+      },
+      "tags": [
+        "skylence",
+        "workflow",
+        "sky",
+        "dag",
+        "claude-code-harness",
+        "github-webhook",
+        "automation",
+        "go",
+        "mcp"
+      ]
+    }
+  ]
+}

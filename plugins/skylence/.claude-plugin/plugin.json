@@ -1,0 +1,18 @@
+{
+  "name": "skylence",
+  "version": "1.0.0",
+  "description": "Skylence .sky workflow authoring and operation: 1 agent, 4 slash commands, 5 skills, 5 bundled MCP servers (stdio + HTTP), and 13 LSP servers (sky lsp stdio plus the official Claude Code language servers). Prerequisite: the sky binary on PATH.",
+  "author": {
+    "name": "Skylence"
+  },
+  "license": "MIT",
+  "keywords": [
+    "skylence",
+    "sky",
+    "workflow",
+    "dag",
+    "claude-code-harness",
+    "automation",
+    "mcp"
+  ]
+}
