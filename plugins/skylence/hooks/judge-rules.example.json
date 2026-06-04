@@ -1,6 +1,6 @@
 {
   "_comment": "Copy to ~/.claude/judge-rules.json and customize. Rules evaluate in declaration order; first match wins. Three classes: 'deny' blocks (exit 2); 'allow' short-circuits to allow (use for allowlist patterns above broader denies); 'escalate' spawns `claude -p` with judge_prompt and parses the first word of the response (ALLOW or BLOCK). 'pattern' is a POSIX extended regex matched against the tool_input JSON. Patterns are case-sensitive. Portable across GNU grep and BSD grep — avoid \\s inside [], use [[:space:]]; avoid [^\\n], use .* (which already excludes newlines). The '_category' field is an inline label, ignored by the hook.",
-  "_categories": "fs | net | privilege | git-destructive | git-review | secrets | db | cloud | deps | system",
+  "_categories": "fs | net | privilege | git-destructive | git-review | secrets | db | cloud | deps | system | skyline-steering",
   "_caveats": "Regex bypasses exist (rm -fr vs rm -rf, alternative interpreters, base64-decoded commands). This is a safety net, not a security boundary. Pair with docs/judge-hook.md.",
   "rules": [
     {
@@ -210,6 +210,57 @@
       "pattern": "(\\bkillall\\s|\\bpkill\\s+-9\\b|\\bkill\\s+-9\\s+1\\b)",
       "class": "deny",
       "reason": "mass process kill or kill init"
+    },
+
+    {
+      "_category": "skyline-steering",
+      "_comment": "Escape hatch first (allow short-circuits the steering denies below): prefix a command with RAW=1 when raw output is genuinely needed (binary content, non-repo paths, skyline truncated something).",
+      "tool": "Bash",
+      "pattern": "\"command\"\\s*:\\s*\"RAW=1 ",
+      "class": "allow",
+      "reason": "explicit raw-output escape hatch"
+    },
+    {
+      "_category": "skyline-steering",
+      "tool": "Bash",
+      "pattern": "\"command\"\\s*:\\s*\"(ls|tree)\\b",
+      "class": "deny",
+      "reason": "use skyline_tree instead: gitignore-aware shape with exact counts and [ignored] visibility, every line chains into skyline_read; prefix RAW=1 if raw listing is genuinely needed"
+    },
+    {
+      "_category": "skyline-steering",
+      "tool": "Bash",
+      "pattern": "\"command\"\\s*:\\s*\"find\\b[^\"]*-name",
+      "class": "deny",
+      "reason": "use skyline_tree (shape) or skyline_grep with a glob (content) instead of find -name; prefix RAW=1 to bypass"
+    },
+    {
+      "_category": "skyline-steering",
+      "tool": "Bash",
+      "pattern": "\"command\"\\s*:\\s*\"(cat|head|tail)\\b",
+      "class": "deny",
+      "reason": "use skyline_read instead: returns the ¶path#TAG edit anchor and supports offset/limit; prefix RAW=1 if raw bytes are genuinely needed"
+    },
+    {
+      "_category": "skyline-steering",
+      "tool": "Bash",
+      "pattern": "\"command\"\\s*:\\s*\"(grep|rg)\\b",
+      "class": "deny",
+      "reason": "use skyline_grep (regex) or skyline_sgrep (structural) instead: results are pre-anchored for editing; prefix RAW=1 to bypass"
+    },
+    {
+      "_category": "skyline-steering",
+      "tool": "Bash",
+      "pattern": "\"command\"\\s*:\\s*\"git\\s+(status|diff)\\b",
+      "class": "deny",
+      "reason": "use skyline_git instead: compressed status/diff with per-file edit anchors; prefix RAW=1 for the full raw output. (Extend this rule with log|show and add/commit/push/pull passthrough once skyline 1.0.15 ships gitview v2.)"
+    },
+    {
+      "_category": "skyline-steering",
+      "tool": "Bash",
+      "pattern": "\"command\"\\s*:\\s*\"(cargo\\s+test|pytest)\\b",
+      "class": "deny",
+      "reason": "use skyline_test instead: failures-only with anchored locations, authoritative exit code, full output teed; prefix RAW=1 for the raw run. (Extend with go test / vitest / jest and linter mode once skyline 1.0.15 ships testrun v2.)"
     }
   ]
 }
