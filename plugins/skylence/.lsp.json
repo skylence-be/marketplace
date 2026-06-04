@@ -1,6 +1,6 @@
 {
-  "sky-workflow": {
-    "command": "sky",
+  "skyway": {
+    "command": "skyway",
     "args": ["lsp", "stdio"],
     "extensionToLanguage": {
       ".sky": "sky-workflow"
@@ -10,7 +10,7 @@
     "shutdownTimeout": 5000,
     "maxRestarts": 3
   },
-  "clangd": {
+  "cpp-lsp": {
     "command": "clangd",
     "args": ["--background-index"],
     "extensionToLanguage": {
@@ -25,19 +25,19 @@
       ".H": "cpp"
     }
   },
-  "csharp-ls": {
+  "csharp-lsp": {
     "command": "csharp-ls",
     "extensionToLanguage": {
       ".cs": "csharp"
     }
   },
-  "gopls": {
+  "go-lsp": {
     "command": "gopls",
     "extensionToLanguage": {
       ".go": "go"
     }
   },
-  "jdtls": {
+  "java-lsp": {
     "command": "jdtls",
     "extensionToLanguage": {
       ".java": "java"
@@ -53,20 +53,20 @@
     },
     "startupTimeout": 120000
   },
-  "lua": {
+  "lua-lsp": {
     "command": "lua-language-server",
     "extensionToLanguage": {
       ".lua": "lua"
     }
   },
-  "intelephense": {
+  "php-lsp": {
     "command": "intelephense",
     "args": ["--stdio"],
     "extensionToLanguage": {
       ".php": "php"
     }
   },
-  "pyright": {
+  "python-lsp": {
     "command": "pyright-langserver",
     "args": ["--stdio"],
     "extensionToLanguage": {
@@ -84,19 +84,19 @@
       ".erb": "erb"
     }
   },
-  "rust-analyzer": {
+  "rust-lsp": {
     "command": "rust-analyzer",
     "extensionToLanguage": {
       ".rs": "rust"
     }
   },
-  "sourcekit-lsp": {
+  "swift-lsp": {
     "command": "sourcekit-lsp",
     "extensionToLanguage": {
       ".swift": "swift"
     }
   },
-  "typescript": {
+  "typescript-lsp": {
     "command": "typescript-language-server",
     "args": ["--stdio"],
     "extensionToLanguage": {

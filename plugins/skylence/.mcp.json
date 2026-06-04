@@ -1,6 +1,6 @@
 {
   "skylence": {
-    "command": "sky",
+    "command": "skyway",
     "args": ["mcp", "stdio"]
   },
   "skylence-content": {
@@ -18,5 +18,9 @@
   "skybox-http-mcp": {
     "type": "http",
     "url": "http://127.0.0.1:7070/mcp"
+  },
+  "skyline-npmjs-stdio": {
+    "command": "npx",
+    "args": ["-y", "@skylence-ai/skyline", "mcp"]
   }
 }
