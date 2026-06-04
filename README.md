@@ -9,8 +9,6 @@ Claude Code plugin marketplace. One plugin: **skylence** — author, run, lint, 
 /plugin install skylence@skylence-marketplace
 ```
 
-Requires the `skyway` binary on PATH.
-
 ## LSP servers
 
 The plugin bundles LSP support for `.sky` files plus 12 languages. Install the server for your language:
