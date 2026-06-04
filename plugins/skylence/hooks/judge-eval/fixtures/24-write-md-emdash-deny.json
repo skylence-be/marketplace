@@ -1,0 +1,9 @@
+{
+  "_description": "Write of .md file containing an em dash is denied",
+  "_expected_exit": 2,
+  "tool_name": "Write",
+  "tool_input": {
+    "file_path": "/home/user/project/README.md",
+    "content": "# Title\n\nThis is a description — it explains the project.\n"
+  }
+}

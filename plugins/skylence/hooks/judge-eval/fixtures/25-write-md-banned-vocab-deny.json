@@ -1,0 +1,9 @@
+{
+  "_description": "Write of .md file with >= 150 words containing banned vocab (delve) is denied",
+  "_expected_exit": 2,
+  "tool_name": "Write",
+  "tool_input": {
+    "file_path": "/home/user/project/GUIDE.md",
+    "content": "# Guide\n\nThis guide explains how to use the project. The project is a simple tool that helps you manage your files. It was built with simplicity in mind and works on all major platforms. You can install it by following the steps in this document. First, download the package from the releases page. Then, extract the archive and run the installer. The installer will guide you through the process. After installation, you can start using the tool right away. Open a terminal and type the command name to see the available options. The tool supports several subcommands, each documented below. Use the help flag to get more details on any command. Configuration is stored in a file in your home directory. You can delve into the configuration options to customize the behavior. The tool reads this file on startup. Changes take effect immediately. You do not need to restart anything. The output format can be changed via the config file.\n"
+  }
+}

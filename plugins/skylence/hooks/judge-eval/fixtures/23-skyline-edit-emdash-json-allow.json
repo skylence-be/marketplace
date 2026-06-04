@@ -1,0 +1,8 @@
+{
+  "_description": "skyline_edit patch with em dash targeting only a .json path is allowed (data files exempt)",
+  "_expected_exit": 0,
+  "tool_name": "mcp__skyline__skyline_edit",
+  "tool_input": {
+    "patch": "¶/home/user/project/config.json#ABCD\nreplace 1..1:\n+  \"note\": \"value — with em dash\"\n"
+  }
+}

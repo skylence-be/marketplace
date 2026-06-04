@@ -1,5 +1,5 @@
 {
-  "description": "Judge hook (PreToolUse rules engine, opt-in via ~/.claude/judge-rules.json) + writing-guard on skyline_edit patches + SessionStart steer to prefer skyline MCP tools over built-in file tools.",
+  "description": "Judge hook (PreToolUse rules engine + built-in writing-guard stage, both opt-in via ~/.claude/judge-rules.json) + SessionStart steer to prefer skyline MCP tools over built-in file tools.",
   "hooks": {
     "SessionStart": [
       {
@@ -12,16 +12,6 @@
       }
     ],
     "PreToolUse": [
-      {
-        "matcher": "mcp__skyline.*__skyline_edit",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/writing-guard.sh\"",
-            "statusMessage": "Checking writing guidelines..."
-          }
-        ]
-      },
       {
         "matcher": "Bash|Write|Edit|NotebookEdit|mcp__",
         "hooks": [

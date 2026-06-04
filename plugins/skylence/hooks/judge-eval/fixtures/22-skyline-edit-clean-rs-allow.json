@@ -1,0 +1,8 @@
+{
+  "_description": "Clean skyline_edit patch targeting .rs path is allowed",
+  "_expected_exit": 0,
+  "tool_name": "mcp__skyline__skyline_edit",
+  "tool_input": {
+    "patch": "¶/home/user/project/src/lib.rs#ABCD\nreplace 1..1:\n+// Helper function: does the thing\n"
+  }
+}

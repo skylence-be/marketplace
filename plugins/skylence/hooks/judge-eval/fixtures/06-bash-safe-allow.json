@@ -1,8 +1,8 @@
 {
-  "_description": "Plain ls -la is allowed (no rule matches)",
+  "_description": "Safe command matched by no rule is allowed (ls/cat/grep now have skyline-steering denies, so use echo)",
   "_expected_exit": 0,
   "tool_name": "Bash",
   "tool_input": {
-    "command": "ls -la /tmp"
+    "command": "echo build finished"
   }
 }
