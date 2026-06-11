@@ -5,7 +5,7 @@
     "contact": "github.com/skylence-be"
   },
   "metadata": {
-    "description": "Skylence Claude Code marketplace. One plugin: skylence — author, run, lint, and debug .sky workflows for the Skylence harness builder."
+    "description": "Skylence Claude Code marketplace. Two plugins: skylence — author, run, lint, and debug .sky workflows for the Skylence harness builder; agent-org — the Skylence agent-org v2 doctrine pack (role skills, session-discipline hooks, build-slot, ghost-probe, Codex conduct)."
   },
   "plugins": [
     {
@@ -26,6 +26,25 @@
         "automation",
         "go",
         "mcp"
+      ]
+    },
+    {
+      "name": "agent-org",
+      "source": "./plugins/agent-org",
+      "description": "Skylence agent-org v2 in a box (operator redesign 2026-06-10). 4 role skills: orchestrator (event-driven conductor for Solo-based worker agents), solo-worker (worker conduct under an orchestrator), replacer (successor pickup of a predecessor's lane from durable state), org-audit (on-demand cold review of the running org). 2 hooks: org-lane-mark (PreToolUse on Solo spawn/timer tools marks the session as having dispatched workers) + org-stop-gate (Stop gate that blocks the first idle with the anti-idle checklist; inert in sessions that never spawn). scripts/: build-slot, the machine-wide compile serializer (mkdir-lock, nextest refusal), and ghost-probe.sh, the field-validated PTY input-line classifier behind the no-fusion law (zero-touch raw check, one-space probe, live-typing guard — GHOST/TYPED/EMPTY/LIVE verdicts). codex/: AGENTS.md worker conduct, execpolicy org rules (nextest ban + build-slot law), and the Codex solo-worker skill — documented manual installs. Design doc: gist jonasvanderhaegen/4f6251458e529d290db93ee7afada592.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Skylence"
+      },
+      "tags": [
+        "agent-org",
+        "solo",
+        "orchestrator",
+        "multi-agent",
+        "codex",
+        "hooks",
+        "no-fusion",
+        "build-slot"
       ]
     }
   ]
