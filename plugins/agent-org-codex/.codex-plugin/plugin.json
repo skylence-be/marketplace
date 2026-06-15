@@ -1,7 +1,7 @@
 {
   "name": "agent-org-codex",
-  "version": "0.1.0",
-  "description": "Codex worker-side package for the Skylence agent org: solo-worker conduct, build-slot serializer, execpolicy rules, ghost-probe helper, and Codex lifecycle hooks.",
+  "version": "0.1.1",
+  "description": "Codex package for the full Skylence agent org: orchestrator, replacer, org-audit, solo-worker conduct, build-slot serializer, execpolicy rules, ghost-probe helper, and Codex lifecycle hooks.",
   "author": {
     "name": "Skylence",
     "url": "https://github.com/skylence-be"
@@ -21,8 +21,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Agent Org Codex",
-    "shortDescription": "Codex worker conduct for the Skylence agent org.",
-    "longDescription": "A Codex-native companion to the Claude Code agent-org plugin. It packages the Codex solo-worker skill, AGENTS.md guidance, execpolicy rules for build-slot and nextest safety, helper scripts used by the Solo-orchestrated worker lane, and Codex lifecycle hooks for SessionStart steering plus PreToolUse build-slot checks.",
+    "shortDescription": "Full Skylence agent-org skills and Codex hooks.",
+    "longDescription": "A Codex-native companion to the Claude Code agent-org plugin. It symlinks the shared orchestrator, replacer, and org-audit skills from the Claude package, keeps the Codex solo-worker variant, and packages AGENTS.md guidance, execpolicy rules for build-slot and nextest safety, helper scripts used by Solo-orchestrated lanes, and Codex lifecycle hooks for SessionStart steering plus PreToolUse build-slot checks.",
     "developerName": "Skylence",
     "category": "Developer Tools",
     "capabilities": [
@@ -31,9 +31,9 @@
       "Hooks"
     ],
     "defaultPrompt": [
+      "Invoke orchestrator and plan worker lanes.",
       "Invoke solo-worker and read my todo brief.",
-      "Apply the agent-org build-slot rules.",
-      "Prepare a worker milestone report."
+      "Run an org-audit of the current board."
     ],
     "brandColor": "#7C3AED"
   }

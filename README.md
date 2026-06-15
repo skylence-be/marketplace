@@ -10,7 +10,7 @@ Claude-side plugins live under `.claude-plugin/` and currently expose:
 Codex-side marketplace metadata lives under `.agents/plugins/` and exposes Codex-native companion packages:
 
 - **skylence-codex** — judge-design skills, bundled MCP server definitions, and a Codex SessionStart skyline steering hook; omits Claude-only commands and LSP setup.
-- **agent-org-codex** — Codex worker-side solo-worker skill, AGENTS.md guidance, execpolicy rules, build-slot, ghost-probe helper, and Codex lifecycle hooks for SessionStart/PreToolUse.
+- **agent-org-codex** — full Codex-side agent-org pack: orchestrator, replacer, org-audit, Codex solo-worker, AGENTS.md guidance, execpolicy rules, build-slot, ghost-probe helper, and Codex lifecycle hooks for SessionStart/PreToolUse.
 
 The split follows the private cross-vendor guide's model/tooling map: Claude Code, Codex, and Gemini CLI occupy similar agent-shell roles (skills/hooks/MCP/subagents), but plugin manifests should stay native to each shell instead of sharing Claude-only contracts.
 
