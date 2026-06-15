@@ -1,0 +1,42 @@
+{
+  "name": "skylence-codex",
+  "version": "0.1.0",
+  "description": "Codex companion for the Skylence toolchain: skyline-friendly judge-design skills, bundled MCP server definitions, and a SessionStart steering hook for Skylence development.",
+  "author": {
+    "name": "Skylence",
+    "url": "https://github.com/skylence-be"
+  },
+  "homepage": "https://github.com/skylence-be/marketplace",
+  "repository": "https://github.com/skylence-be/marketplace",
+  "license": "MIT",
+  "keywords": [
+    "skylence",
+    "skyline",
+    "sky",
+    "workflow",
+    "dag",
+    "automation",
+    "mcp",
+    "codex"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Skylence Codex",
+    "shortDescription": "Skylence skills and MCP servers for Codex.",
+    "longDescription": "A Codex-native companion to the Skylence Claude Code plugin. It exposes the judge-design skill chain, bundled MCP server definitions, and a Codex SessionStart hook that steers sessions toward skyline-first tooling while leaving Claude-only slash commands and LSP setup out of the Codex package.",
+    "developerName": "Skylence",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Skills",
+      "MCP",
+      "Hooks"
+    ],
+    "defaultPrompt": [
+      "Audit this action surface for judge criteria.",
+      "Draft a judge prompt and eval cases.",
+      "Use skyline-first tools on this repo."
+    ],
+    "brandColor": "#0EA5E9"
+  }
+}
