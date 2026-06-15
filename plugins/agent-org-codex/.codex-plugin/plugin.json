@@ -1,0 +1,40 @@
+{
+  "name": "agent-org-codex",
+  "version": "0.1.0",
+  "description": "Codex worker-side package for the Skylence agent org: solo-worker conduct, build-slot serializer, execpolicy rules, ghost-probe helper, and Codex lifecycle hooks.",
+  "author": {
+    "name": "Skylence",
+    "url": "https://github.com/skylence-be"
+  },
+  "homepage": "https://github.com/skylence-be/marketplace",
+  "repository": "https://github.com/skylence-be/marketplace",
+  "license": "MIT",
+  "keywords": [
+    "agent-org",
+    "solo",
+    "orchestrator",
+    "multi-agent",
+    "codex",
+    "build-slot",
+    "no-fusion"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Agent Org Codex",
+    "shortDescription": "Codex worker conduct for the Skylence agent org.",
+    "longDescription": "A Codex-native companion to the Claude Code agent-org plugin. It packages the Codex solo-worker skill, AGENTS.md guidance, execpolicy rules for build-slot and nextest safety, helper scripts used by the Solo-orchestrated worker lane, and Codex lifecycle hooks for SessionStart steering plus PreToolUse build-slot checks.",
+    "developerName": "Skylence",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Skills",
+      "Scripts",
+      "Hooks"
+    ],
+    "defaultPrompt": [
+      "Invoke solo-worker and read my todo brief.",
+      "Apply the agent-org build-slot rules.",
+      "Prepare a worker milestone report."
+    ],
+    "brandColor": "#7C3AED"
+  }
+}

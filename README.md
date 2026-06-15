@@ -1,12 +1,35 @@
 # Skylence Marketplace
 
-Claude Code plugin marketplace. One plugin: **skylence** — wires the Skylence toolchain into Claude Code: MCP servers, language LSPs, and a judge safety hook.
+Claude Code and Codex plugin marketplace for Skylence tooling.
 
-## Install
+Claude-side plugins live under `.claude-plugin/` and currently expose:
+
+- **skylence** — MCP servers, language LSPs, judge-design skills, and a judge safety hook for Claude Code.
+- **agent-org** — the Claude/Solo orchestrator doctrine pack with hooks, role skills, build-slot, ghost-probe, and Codex conduct files.
+
+Codex-side marketplace metadata lives under `.agents/plugins/` and exposes Codex-native companion packages:
+
+- **skylence-codex** — judge-design skills, bundled MCP server definitions, and a Codex SessionStart skyline steering hook; omits Claude-only commands and LSP setup.
+- **agent-org-codex** — Codex worker-side solo-worker skill, AGENTS.md guidance, execpolicy rules, build-slot, ghost-probe helper, and Codex lifecycle hooks for SessionStart/PreToolUse.
+
+The split follows the private cross-vendor guide's model/tooling map: Claude Code, Codex, and Gemini CLI occupy similar agent-shell roles (skills/hooks/MCP/subagents), but plugin manifests should stay native to each shell instead of sharing Claude-only contracts.
+
+## Claude Code install
 
 ```
 /plugin marketplace add skylence-be/marketplace
 /plugin install skylence@skylence-marketplace
+/plugin install agent-org@skylence-marketplace
+```
+
+## Codex install
+
+This repo includes a Codex marketplace at `.agents/plugins/marketplace.json`. Add the repo-local marketplace root, then install either Codex companion plugin:
+
+```
+codex plugin marketplace add /Users/jv/Code/skylence/marketplace/.agents/plugins
+codex plugin add skylence-codex@skylence-marketplace
+codex plugin add agent-org-codex@skylence-marketplace
 ```
 
 ## LSP servers
