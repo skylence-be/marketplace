@@ -6,7 +6,6 @@ cat <<'EOF'
 ## Skylence Codex plugin
 
 Prefer skyline MCP tools for code work when available: skyline_tree, skyline_read,
-skyline_grep, skyline_edit, skyline_git, and skyline_run. Use the bundled
-Skylence MCP servers only when their local endpoints or binaries are reachable.
+skyline_grep, skyline_edit, skyline_git, and skyline_run.
 EOF
 exit 0

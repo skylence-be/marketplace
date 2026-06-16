@@ -1,7 +1,7 @@
 {
   "name": "skylence-codex",
-  "version": "0.1.1",
-  "description": "Codex companion for the Skylence toolchain: skyline-friendly judge-design skills, bundled MCP server definitions, and a SessionStart steering hook for Skylence development.",
+  "version": "0.2.0",
+  "description": "Codex companion for the Skylence toolchain: skyline-friendly judge-design skills and a SessionStart steering hook for Skylence development.",
   "author": {
     "name": "Skylence",
     "url": "https://github.com/skylence-be"
@@ -20,11 +20,10 @@
     "codex"
   ],
   "skills": "./skills/",
-  "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Skylence Codex",
-    "shortDescription": "Skylence skills and MCP servers for Codex.",
-    "longDescription": "A Codex-native companion to the Skylence Claude Code plugin. It exposes the judge-design skill chain, bundled MCP server definitions, and a Codex SessionStart hook that steers sessions toward skyline-first tooling while leaving Claude-only slash commands and LSP setup out of the Codex package.",
+    "shortDescription": "Skylence skills for Codex.",
+    "longDescription": "A Codex-native companion to the Skylence Claude Code plugin. It exposes the judge-design skill chain and a Codex SessionStart hook that steers sessions toward skyline-first tooling while leaving Claude-only slash commands and LSP setup out of the Codex package.",
     "developerName": "Skylence",
     "category": "Developer Tools",
     "capabilities": [
