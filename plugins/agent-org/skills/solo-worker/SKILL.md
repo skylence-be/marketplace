@@ -25,7 +25,7 @@ Your dispatch is usually a pointer: "you own todo <title>" — the todo body is 
 ## Execution
 
 - Session entry smoke: `git branch --show-current` + assert it matches the brief; `git status --short` + `git log --oneline -1` so tree state is known before reading code.
-- Same-branch co-workers may exist (skyline is built for it): pull --rebase before pushing; a stale-tag rejection from skyline_edit means the file moved under you — re-read and retry, it is not a conflict. Never move refs others may stand on.
+- Same-branch co-workers are normal on a fanned-out feature, not an edge case (skyline is built for it — more lanes is how big work ships faster): pull --rebase before pushing; a stale-tag rejection from skyline_edit means the file moved under you — re-read and retry, it is not a conflict. Never move refs others may stand on; additive commits only. One feature PR per shared branch — open it only if a co-worker hasn't already; otherwise just push to the branch.
 - Commit WIP at every milestone boundary (wip: prefix fine) — git is the real handover; compaction or a kill then costs nothing.
 - Verify artifacts, not exit codes (file present and sized, port answering, count seen). Commands that can exceed ~5 min run in background with output teed to a log.
 - Scratch artifacts: /tmp/<todo-title-slug>_<artifact>, never generic names.
