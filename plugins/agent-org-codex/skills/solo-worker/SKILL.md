@@ -24,4 +24,4 @@ Your dispatch is a pointer: "you own todo <title>" — read the todo body via th
 
 ## Shared branches
 
-Co-workers may edit the same branch concurrently — skyline's hash-guarded edits are designed for it: `git pull --rebase` before every push; commit WIP at every milestone (wip: prefix fine); a stale-tag rejection from skyline_edit means re-read and retry, not conflict. Never move refs others may stand on; additive commits only.
+Co-workers editing the same branch concurrently are normal on a fanned-out feature, not an edge case — skyline's hash-guarded edits are designed for it and more lanes is how big work ships faster: `git pull --rebase` before every push; commit WIP at every milestone (wip: prefix fine); a stale-tag rejection from skyline_edit means re-read and retry, not conflict. Never move refs others may stand on; additive commits only. One feature PR per shared branch — open it only if a co-worker hasn't already; otherwise just push.
