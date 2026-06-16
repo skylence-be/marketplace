@@ -1,7 +1,7 @@
 {
   "name": "skylence",
-  "version": "1.1.0",
-  "description": "Wires the Skylence toolchain into Claude Code: /lsp install <language>, the judge-design skill chain + judge-setup, 6 bundled MCP servers, 13 LSP servers, a judge PreToolUse hook with built-in writing-guard stage (both inert until ~/.claude/judge-rules.json exists), and a SessionStart skyline-tools steer. Everything dormant until its binary, endpoint, or opt-in file is present.",
+  "version": "1.2.0",
+  "description": "Wires the Skylence toolchain into Claude Code: /lsp install <language>, the judge-design skill chain + judge-setup, 13 LSP servers, a judge PreToolUse hook with built-in writing-guard stage (both inert until ~/.claude/judge-rules.json exists), and a SessionStart skyline-tools steer. Everything dormant until its binary, endpoint, or opt-in file is present.",
   "author": {
     "name": "Skylence"
   },

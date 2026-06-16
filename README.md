@@ -4,12 +4,12 @@ Claude Code and Codex plugin marketplace for Skylence tooling.
 
 Claude-side plugins live under `.claude-plugin/` and currently expose:
 
-- **skylence** — MCP servers, language LSPs, judge-design skills, and a judge safety hook for Claude Code.
+- **skylence** — language LSPs, judge-design skills, and a judge safety hook for Claude Code.
 - **agent-org** — the Claude/Solo orchestrator doctrine pack with hooks, role skills, build-slot, ghost-probe, and Codex conduct files.
 
 Codex-side marketplace metadata lives under `.agents/plugins/` and exposes Codex-native companion packages:
 
-- **skylence-codex** — judge-design skills, bundled MCP server definitions, and a Codex SessionStart skyline steering hook; omits Claude-only commands and LSP setup.
+- **skylence-codex** — judge-design skills and a Codex SessionStart skyline steering hook; omits Claude-only commands and LSP setup.
 - **agent-org-codex** — full Codex-side agent-org pack: orchestrator, replacer, org-audit, Codex solo-worker, AGENTS.md guidance, execpolicy rules, build-slot, ghost-probe helper, and Codex lifecycle hooks for SessionStart/PreToolUse.
 
 The split follows the private cross-vendor guide's model/tooling map: Claude Code, Codex, and Gemini CLI occupy similar agent-shell roles (skills/hooks/MCP/subagents), but plugin manifests should stay native to each shell instead of sharing Claude-only contracts.
@@ -44,7 +44,6 @@ Works for `php`, `python`, `typescript`, `go`, `rust`, `ruby`, `csharp`, `cpp`, 
 
 ## Also included
 
-- **6 MCP servers** via `.mcp.json` — skylence-content, skyline (HTTP + npx), skyway, skybox. Dormant unless reachable.
 - **Judge hook** — PreToolUse deny/allow/escalate rules engine. Inert until `~/.claude/judge-rules.json` exists; run the `judge-setup` skill to opt in (writes CLAUDE.md guidance, seeds rules from the example, registers the user-scope hook). Eval suite in `plugins/skylence/hooks/judge-eval/`.
 - **judge-design skills** — action-surface-audit, judge-criteria, judge-prompt-writer, judge-eval-suite, judge-architecture-review.
 - **SessionStart steer** — prefers skyline MCP tools over built-in file tools; offers the skyline daemon setup once (declines are remembered).

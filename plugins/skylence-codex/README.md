@@ -5,7 +5,6 @@ Codex-native companion to the Claude Code `skylence` plugin.
 It keeps the Codex-compatible pieces:
 
 - `skills/` — judge-design skill chain for action-surface audit, criteria writing, prompt writing, eval-suite design, and architecture review.
-- `.mcp.json` — Skylence MCP server definitions, dormant until the endpoints or binaries are available.
 - `hooks/hooks.json` — a Codex `SessionStart` hook that injects skyline-first steering when the plugin is enabled and its hook is trusted.
 
 It intentionally omits Claude-only plugin pieces:

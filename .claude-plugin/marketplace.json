@@ -11,8 +11,8 @@
     {
       "name": "skylence",
       "source": "./plugins/skylence",
-      "description": "Wires the Skylence toolchain into Claude Code. 1 slash command (/lsp install <language> — deterministic, OS-aware LSP binary installer that stops when the required package manager is missing) and 6 skills: the judge-design chain (action-surface-audit, judge-criteria, judge-prompt-writer, judge-eval-suite, judge-architecture-review) plus judge-setup (writes a ## Judge section to ~/.claude/CLAUDE.md, seeds judge-rules.json from the example, registers the hook in user settings.json). Bundles 6 MCP servers via .mcp.json (skylence-content, skyline via HTTP and npx, skyway, skybox), 13 LSP servers via .lsp.json (.sky files plus the official Claude Code language servers for C/C++, C#, Go, Java, Kotlin, Lua, PHP, Python, Ruby, Rust, Swift, and TypeScript), a judge hook (PreToolUse deny/allow/escalate rules engine, inert until ~/.claude/judge-rules.json exists, 20-fixture eval suite included), and a SessionStart steer that prefers skyline MCP tools and offers the skyline daemon setup once (declines remembered). Everything is dormant until its binary, endpoint, or opt-in file is present.",
-      "version": "1.0.0",
+      "description": "Wires the Skylence toolchain into Claude Code. 1 slash command (/lsp install <language> — deterministic, OS-aware LSP binary installer that stops when the required package manager is missing) and 6 skills: the judge-design chain (action-surface-audit, judge-criteria, judge-prompt-writer, judge-eval-suite, judge-architecture-review) plus judge-setup (writes a ## Judge section to ~/.claude/CLAUDE.md, seeds judge-rules.json from the example, registers the hook in user settings.json). Bundles 13 LSP servers via .lsp.json (.sky files plus the official Claude Code language servers for C/C++, C#, Go, Java, Kotlin, Lua, PHP, Python, Ruby, Rust, Swift, and TypeScript), a judge hook (PreToolUse deny/allow/escalate rules engine, inert until ~/.claude/judge-rules.json exists, 20-fixture eval suite included), and a SessionStart steer that prefers skyline MCP tools and offers the skyline daemon setup once (declines remembered). Everything is dormant until its binary, endpoint, or opt-in file is present.",
+      "version": "1.2.0",
       "author": {
         "name": "Skylence"
       },
@@ -32,7 +32,7 @@
       "name": "agent-org",
       "source": "./plugins/agent-org",
       "description": "Skylence agent-org v2 in a box (operator redesign 2026-06-10). 4 role skills: orchestrator (event-driven conductor for Solo-based worker agents), solo-worker (worker conduct under an orchestrator), replacer (successor pickup of a predecessor's lane from durable state), org-audit (on-demand cold review of the running org). 2 hooks: org-lane-mark (PreToolUse on Solo spawn/timer tools marks the session as having dispatched workers) + org-stop-gate (Stop gate that blocks the first idle with the anti-idle checklist; inert in sessions that never spawn). scripts/: build-slot, the machine-wide compile serializer (mkdir-lock, nextest refusal), and ghost-probe.sh, the field-validated PTY input-line classifier behind the no-fusion law (zero-touch raw check, one-space probe, live-typing guard — GHOST/TYPED/EMPTY/LIVE verdicts). codex/: AGENTS.md worker conduct, execpolicy org rules (nextest ban + build-slot law), and the Codex solo-worker skill — documented manual installs. Design doc: gist jonasvanderhaegen/4f6251458e529d290db93ee7afada592.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "Skylence"
       },
