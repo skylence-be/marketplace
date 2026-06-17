@@ -1,6 +1,6 @@
 {
   "name": "skylence-codex",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Codex companion for the Skylence toolchain: skyline-friendly judge-design skills and a SessionStart steering hook for Skylence development.",
   "author": {
     "name": "Skylence",
